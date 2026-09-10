@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+}
+
+.box-yellow {
+    background-color: #FCD116;
+    color: black;
+    margin-left: 0;
+}
+
+.box-blue {
+    background-color: #002B7F;
+    color: white;
+    margin-left: 200px;
+}
+
+.box-red {
+    background-color: #CE1126;
+    color: white;
+    margin-left: 400px;
+}

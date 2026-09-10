@@ -32,7 +32,7 @@ body {
 }
 
 .row-3 {
-    height: 72px;
+    height: 80px;
 }
 
 .box {
@@ -45,7 +45,7 @@ body {
 }
 
 .box-red {
-    width: 282px;
+    width: 280px;
     background-color: #dd0000;
 }
 
@@ -60,7 +60,7 @@ body {
 }
 
 .box-blue {
-    width: 73px;
+    width: 70px;
     background-color: #0000dd;
 }
 
@@ -75,6 +75,6 @@ body {
 }
 
 .box-white-4 {
-    width: 73px;
+    width: 70px;
     background-color: #ffffff;
 }
