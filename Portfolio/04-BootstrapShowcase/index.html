@@ -33,7 +33,7 @@
              On mobile screens, they should stack vertically (12 columns each). -->
         <div class="row align-items-center">
             
-            <div class="col-12">
+            <div class="col-12 col-lg-5">
                 <!-- HERO TEXT COLUMN (Needs responsive col declarations) -->
                 <h1>Support SDG Goal 13: Climate Action</h1>
                 <p class="lead">Our planet is facing unprecedented environmental challenges. Join the SustainHub community sprint to develop software integrations that track local emissions, organize dynamic community-led restoration events, and shut down dark patterns in greenwashed marketing pipelines.</p>
@@ -42,17 +42,40 @@
                 <!-- Task: Add a primary action button and a secondary outline button -->
                 <div class="my-3">
                     <!-- ADD BUTTONS HERE -->
+                    <button class="btn btn-primary me-2">Join Sprint</button>
+                    <button class="btn btn-outline-secondary">Learn More</button>
                 </div>
             </div>
 
-            <div class="col-12">
+            <div class="col-12 col-lg-7">
                 <!-- CAROUSEL COMPONENT COLUMN (Needs responsive col declarations) -->
                 <!-- Task: Insert a Bootstrap Carousel component inside this column slot.
                      Configure 3 slides with custom climate target labels. -->
-                <div class="border p-3 text-center text-muted bg-white rounded">
-                    [Carousel Component Slot - Students Must Build the Slides, Indicators, and Prev/Next Controls Here]
+                <div id="metricsCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner bg-dark text-white p-5 rounded text-center">
+                        <div class="carousel-item active">
+                            <h3>1.5°C</h3>
+                            <p>Global Warming Limit Target</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>45%</h3>
+                            <p>Emissions Reduction Target by 2030</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Net-Zero</h3>
+                            <p>Global Carbon Emissions Target by 2050</p>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#metricsCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#metricsCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
                 </div>
             </div>
+
+        </div>
 
         </div>
 
@@ -65,34 +88,37 @@
         <div class="row g-4">
             
             <!-- Card 1 Slot -->
-            <div class="col-12">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title">Forest Restoration</h5>
                         <p class="card-text">Organize tree planting drives and analyze canopy coverage metrics dynamically using public satellite datasets.</p>
                         <!-- Button goes here -->
+                        <a href="#" class="btn btn-outline-primary btn-sm mt-2">Get Started</a>
                     </div>
                 </div>
             </div>
 
             <!-- Card 2 Slot -->
-            <div class="col-12">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title">Energy Trackers</h5>
                         <p class="card-text">Develop software dashboards for businesses to log real-time energy expenditures and locate carbon bottlenecks.</p>
                         <!-- Button goes here -->
+                        <a href="#" class="btn btn-outline-primary btn-sm mt-2">Get Started</a>
                     </div>
                 </div>
             </div>
 
             <!-- Card 3 Slot -->
-            <div class="col-12">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title">Ocean Cleanups</h5>
                         <p class="card-text">Map localized plastic deposition vectors and coordinate volunteer cleanup deployments on regional shorelines.</p>
                         <!-- Button goes here -->
+                        <a href="#" class="btn btn-outline-primary btn-sm mt-2">Get Started</a>
                     </div>
                 </div>
             </div>
