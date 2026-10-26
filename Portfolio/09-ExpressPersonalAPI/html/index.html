@@ -10,16 +10,51 @@
 
 <body>
     <% if (locals.error) { %>
-        <h3>
-            <%= error %>
-        </h3>
-        <% } %>
-            <form action="/greet" method="get">
-                Register:
-                <input type="text" name="name" id="name" placeholder="Name">
-                <input type="submit" value="go next">
-            </form>
+        <h3><%= error %></h3>
+    <% } %>
 
+    <h2>Register</h2>
+    <form action="/greet" method="get">
+        Register:
+        <input type="text" name="name" id="name" placeholder="Name" required>
+        <input type="submit" value="go next">
+    </form>
+
+    <% if (locals.message) { %>
+        <p><%= message %></p>
+    <% } %>
+
+    <h2>Registered People</h2>
+    <ul>
+        <% names.forEach(function (name, index) { %>
+            <li>
+                <a href="/greet?index=<%= index %>"><%= name %></a>
+            </li>
+        <% }); %>
+    </ul>
+
+    <h2>TODO List</h2>
+    <form action="/task" method="post">
+        <input type="text" name="task" placeholder="New task" required>
+        <button type="submit">Add task</button>
+    </form>
+
+    <ul>
+        <% tasks.forEach(function (task, index) { %>
+            <li>
+                <%= task %>
+                <form action="/task/up/<%= index %>" method="post" style="display: inline;">
+                    <button type="submit" title="Move up">&uarr;</button>
+                </form>
+                <form action="/task/down/<%= index %>" method="post" style="display: inline;">
+                    <button type="submit" title="Move down">&darr;</button>
+                </form>
+                <form action="/task/delete/<%= index %>" method="post" style="display: inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
 </body>
 
 </html>
